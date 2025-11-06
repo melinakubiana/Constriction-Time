@@ -4,9 +4,19 @@
 
 # Exercise 1:
 # Write a function that takes in a string as a parameter and returns a tuple of:
+def take_in_string(sentence:str)->tuple:
+   sentence=sentence.lower()
+   count=0
 # 1) A Dictionary that counts how many times a letter in the string appear.
+   my_dict=[]
+   for char in tuple(sentence):
+       if char in set(sentence):
+        count+=1
+        my_dict.append((char,count))
+        
 # 2) A list of all the letters that appear in the string.
-
+   my_list=list(set(sentence))
+   return (my_dict,my_list)
 
 # Exercise 2:
 # Hello there, you are a software engineer right? Rhetorical question.
@@ -65,6 +75,10 @@ def decoding_mose_code(code):
 
 # Exercise 3:
 # Write a function that takes 2 parameters as lists and returns 
+def my_lists(list1,list2:list)->list:
+   my_list=set.union(list1,list2)
+   return my_list
+   
 # a new list made up of the original list but with not duplicates.
 
 
@@ -78,5 +92,10 @@ def decoding_mose_code(code):
 
 
 # Exercise 5:
-# Write a function that takes an integer as a parameter and prints a right-angled number triangle, 
+# Write a function that takes an integer as a parameter and prints a right-angled number triangle
+def triangle(n:int):
+   return 
 # where each row contains numbers from 1 up to the row number
+if __name__=="__main__":
+    print(take_in_string('ABCDEFGHIJ'))
+    print(my_lists({1,2,3,4,5},{2,3,4,6,7,8}))
